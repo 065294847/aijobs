@@ -15,7 +15,7 @@ max_tokens=300,
 top_p=1,
 frequency_penalty=0,
 presence_penalty=0)
-st.text('Remaining phrase:')
+st.text('Annonce:')
 st.markdown(response["choices"][0]["text"])
 
 
