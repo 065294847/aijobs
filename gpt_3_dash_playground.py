@@ -4,7 +4,7 @@ import streamlit as st
 openai.api_key = st.secrets["SECRET_KEY"]
 
 
-st.title('GPT-3')
+st.title('Her skriver AI-robotten dit jobopslag')
 
 st.text('Denne model kan skrive jobannoncer på kommando.')
 prompt_text0 = st.text_input(label="Hvad hedder stillingen? Eksempel: Redaktør til internt nyhedsbrev", value="Input")
@@ -15,6 +15,7 @@ max_tokens=800,
 top_p=1,
 frequency_penalty=0,
 presence_penalty=0)
+st.text('Husk at trykke RETURN, når du har skrevet dit input')
 st.text('Annonce:')
 st.markdown(response["choices"][0]["text"])
 
